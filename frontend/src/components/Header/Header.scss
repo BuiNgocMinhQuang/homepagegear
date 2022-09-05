@@ -1,0 +1,137 @@
+@import "../GlobalStyles/mixin.scss";
+
+.menu-moible-header {
+  display: none;
+  .mb-3 {
+    margin: 0 !important;
+    padding: 0 50px;
+  }
+  .navbar-toggler-icon {
+    background-image: url(../../assets/images/nav-menu.svg);
+  }
+}
+.container {
+  padding: 0;
+  margin: 0;
+}
+.bg-menu {
+  background-color: #1e1f24;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+
+  .navbar-toggler-icon {
+    background-image: url(../../assets/images/nav-menu.svg);
+  }
+  .me-auto {
+    color: #fff;
+  }
+  .navbar-expand-lg {
+    justify-content: center;
+  }
+  .navbar-nav {
+    a {
+      color: #fff;
+      font-family: "Roboto-R", sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    .nav-link {
+      margin: 20px;
+      &:hover,
+      &:focus {
+        color: #ffbb33;
+      }
+    }
+  }
+  .dropdown-item {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #1e1f24;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #ffbb33;
+    }
+  }
+
+  .dropdown-divider {
+    display: none;
+  }
+  .actions {
+    .nav-link {
+      margin: 0;
+      text-transform: none;
+    }
+    .action-icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-moible-header {
+    display: block;
+  }
+
+  .nav-overplay {
+    background-color: #1e1f24;
+    width: 100% !important;
+    font-family: "Roboto-R", sans-serif;
+    font-size: 14px;
+    .offcanvas-header {
+      width: 100%;
+
+      .btn-close {
+        color: #fff;
+        background: transparent url(../../assets/images/close-icon.svg)
+          center/1em auto no-repeat;
+      }
+    }
+    .offcanvas-body {
+      color: #fff;
+      .navbar-nav {
+        padding-bottom: 15px;
+      }
+
+      .nav-link {
+        text-transform: uppercase;
+      }
+      .dropdown-item {
+        text-transform: uppercase;
+      }
+      .btn-outline-success {
+        color: #fff;
+        border-color: #fff;
+        outline: none;
+        &:active,
+        &:focus,
+        &:hover {
+          color: #fff !important;
+          border-color: #fff !important;
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .bg-menu {
+    .actions {
+      display: none;
+    }
+    .navbar-toggler-icon {
+      z-index: 100;
+    }
+  }
+}
+@include respond(phone) {
+  .bg-menu {
+    .actions {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../../components/GlobalStyles/mixin.scss";
+.image-home {
+  position: relative;
+  width: 100%;
+  font-family: "Roboto-R", sans-serif;
+  font-size: 14px;
+  img {
+    width: 100%;
+  }
+  .content {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 80px;
+    max-width: 270px;
+    color: #fff;
+    h1 {
+      padding-bottom: 20px;
+      font-family: "Roboto-B", sans-serif;
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+      padding-bottom: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+@include respond(tab-port) {
+  .image-home {
+    img {
+      height: 80%;
+    }
+    .content {
+      top: 50px;
+      left: 30px;
+      max-width: 200px;
+
+      h1 {
+        font-size: 14px;
+        padding-bottom: 15px;
+      }
+      p {
+        font-size: 12px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .image-home {
+    img {
+      height: 80%;
+    }
+    .content {
+      top: 20px;
+      left: 20px;
+      max-width: 150px;
+
+      h1 {
+        font-size: 10px;
+        padding-bottom: 10px;
+      }
+      p {
+        font-size: 8px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

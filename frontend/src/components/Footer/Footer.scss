@@ -1,0 +1,112 @@
+@import "../GlobalStyles/mixin.scss";
+.footer {
+  background: #000;
+  .colum {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    font-family: "Roboto-R", sans-serif;
+    font-size: 14px;
+    .colum-footer {
+      color: #fff;
+      max-width: 120px;
+      h4 {
+        font-size: 16px;
+        padding-bottom: 8px;
+        font-family: "Roboto-B", sans-serif;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+          text-decoration: none;
+          color: #b0b1b6;
+
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
+      p {
+        color: #b0b1b6;
+        padding-bottom: 10px;
+      }
+      .btn-subscribe {
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        background: red;
+        padding: 5px 15px;
+        font-family: "Roboto-B", sans-serif;
+        &:hover {
+          color: #000;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .white-line {
+    height: 3px;
+    background: #fff;
+  }
+  .bot-foot {
+    background: #1e1f24;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    .foot-icon {
+      display: flex;
+      img {
+        height: 30px;
+        width: 30px;
+        margin-right: 20px;
+      }
+    }
+    .copy-right {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .footer {
+    .colum {
+      font-size: 14px;
+      padding: 20px 40px;
+    }
+    .bot-foot {
+      padding: 5px 60px;
+      .copy-right {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .footer {
+    .colum {
+      display: none;
+    }
+    .bot-foot {
+      padding: 20px;
+      .foot-icon {
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
+      .copy-right {
+        font-size: 8px;
+      }
+    }
+  }
+}

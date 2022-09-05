@@ -1,0 +1,286 @@
+@import "../../../components/GlobalStyles/mixin.scss";
+.review {
+  display: flex;
+  width: 100%;
+  font-family: "Roboto-R", sans-serif;
+  font-size: 14px;
+  .left-review {
+    width: 50%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .content {
+      max-width: 420px;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      z-index: 2;
+      color: #fff;
+      h1,
+      h2 {
+        color: #716e6e;
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-family: "Roboto-B", sans-serif;
+      }
+      h2 {
+        color: var(--white);
+      }
+
+      .title {
+        color: #0bdcce;
+        font-size: 18px;
+        padding: 10px 0;
+      }
+      .desl {
+        font-size: 14px;
+        padding-bottom: 10px;
+      }
+    }
+    .btn-left-review {
+      position: absolute;
+      display: flex;
+      position: absolute;
+      left: 50px;
+      bottom: 50px;
+      align-items: center;
+      .more-review {
+        display: flex;
+        text-decoration: none;
+        padding-left: 50px;
+        text-transform: uppercase;
+        color: #fff;
+        .mricon {
+          margin-left: 6px;
+        }
+        &:hover {
+          color: #ffbb33;
+        }
+      }
+    }
+  }
+  .right-review {
+    position: relative;
+    width: 50%;
+    background: #fff;
+    color: #000;
+    .carousel {
+      position: unset;
+      max-width: 450px;
+      padding-top: 50px;
+      padding-left: 50px;
+    }
+    .carousel-indicators {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      opacity: 1;
+      margin-right: 15%;
+      margin-bottom: 1rem;
+      margin-left: 15%;
+      list-style: none;
+      button {
+        z-index: 5;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #666666;
+      }
+    }
+    .testimonials {
+      font-size: 20px;
+      color: #716e6e;
+      padding-bottom: 10px;
+      font-family: "Roboto-B", sans-serif;
+    }
+    .title {
+      color: red;
+      height: 100%;
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+    .des {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    .more-test {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: red;
+      .action-icon {
+        margin-left: 5px;
+      }
+      &:hover {
+        color: #ffbb33;
+      }
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .review {
+    max-height: 250px;
+    font-size: 12px;
+    .left-review {
+      img {
+        max-height: 250px;
+      }
+      .content {
+        max-width: 350px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+
+        h1,
+        h2 {
+          color: #716e6e;
+          font-size: 16px;
+        }
+        h2 {
+          color: #fff;
+          padding-bottom: 5px;
+        }
+
+        .title {
+          color: #0bdcce;
+          font-size: 12px;
+        }
+        .desl {
+          font-size: 12px;
+          max-width: 250px;
+        }
+      }
+      .btn-left-review {
+        left: 30px;
+        bottom: 15px;
+
+        .more-review {
+          display: flex;
+          text-decoration: none;
+          padding-left: 50px;
+          text-transform: uppercase;
+          color: #fff;
+          .mricon {
+            margin-left: 6px;
+          }
+          &:hover {
+            color: #ffbb33;
+          }
+        }
+      }
+    }
+    .right-review {
+      .carousel {
+        position: unset;
+        max-width: 350px;
+        padding-top: 30px;
+        padding-left: 30px;
+      }
+      .carousel-indicators {
+        list-style: none;
+        button {
+          z-index: 5;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: #666666;
+        }
+      }
+      .testimonials,
+      .title {
+        font-size: 16px;
+      }
+      .des {
+        font-size: 10px;
+        padding-bottom: 10px;
+      }
+      .more-test {
+        display: none;
+        .action-icon {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .review {
+    font-size: 10px;
+    max-height: 150px;
+    .left-review {
+      img {
+        max-height: 150px;
+      }
+      .content {
+        max-width: 150px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        h1,
+        h2 {
+          padding: 0;
+          font-size: 12px;
+          color: #716e6e;
+        }
+        h2 {
+          color: #fff;
+          padding: 10px 0;
+        }
+        .title {
+          color: #0bdcce;
+          font-size: 10px;
+          padding: 0;
+        }
+        .desl {
+          display: none;
+        }
+      }
+      .btn-left-review {
+        display: none;
+      }
+    }
+    .right-review {
+      .carousel {
+        position: unset;
+        max-width: 160px;
+        padding-top: 15px;
+        padding-left: 15px;
+      }
+      .carousel-indicators {
+        bottom: 25px;
+        right: -150px;
+        transform: rotate(90deg);
+        button {
+          z-index: 5;
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          background-color: #666666;
+        }
+      }
+      .testimonials,
+      .title {
+        font-size: 12px;
+        padding-bottom: 0;
+        line-height: 1.2;
+      }
+      .des {
+        font-size: 8px;
+        padding: 5px 0;
+      }
+      .more-test {
+        display: none;
+        .action-icon {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
